@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Music Algorithm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="controls">
+        <h1>Interactive Music Generator</h1>
+        <button id="startStop">Start</button>
+        <label>
+            Beat Duration:
+            <input type="range" id="beatDuration" min="0.2" max="1" step="0.01" value="0.5">
+        </label>
+        <label>
+            Velocity:
+            <input type="range" id="velocity" min="50" max="127" step="1" value="90">
+        </label>
+        <label>
+            Articulation:
+            <input type="range" id="articulation" min="0.1" max="2" step="0.1" value="1">
+        </label>
+        <div>
+            <h2>Timbre</h2>
+            <button class="timbre" data-program="0">Piano</button>
+            <button class="timbre" data-program="40">Strings</button>
+            <button class="timbre" data-program="70">Flute</button>
+        </div>
+        <div>
+            <h2>Pitch Sets</h2>
+            <button class="pitchSet" data-lh="G3,E4,F4" data-rh="G4,B4,C5,D5">Set 1</button>
+            <button class="pitchSet" data-lh="F3,D4,E4" data-rh="F4,A4,C5">Set 2</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
